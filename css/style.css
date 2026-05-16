@@ -515,7 +515,7 @@ input:focus, textarea:focus {
     radial-gradient(ellipse at 20% 50%, #1a0a3a66 0%, transparent 60%),
     radial-gradient(ellipse at 80% 20%, #0a1a3a66 0%, transparent 60%),
     linear-gradient(180deg, #0a0a0fcc 0%, #0f0f1acc 100%),
-    url('./imagens/elderbug.webp');
+    url('./imagens/hollownest.webp');
   background-size: cover;
   background-position: center top;
 }
@@ -523,7 +523,7 @@ input:focus, textarea:focus {
 .tela-2 {
   background-image:
     linear-gradient(180deg, #0f0f1aee 0%, #0a0a0fee 100%),
-    url('./imagens/city_of_tears.webp');
+    url('./imagens/cidadechoro.webp');
   background-size: cover;
   background-position: center;
 }
@@ -531,7 +531,7 @@ input:focus, textarea:focus {
 .tela-4 {
   background-image:
     linear-gradient(180deg, #0f0f1af0 0%, #0a0a0ff0 100%),
-    url('./imagens/resting_grounds.webp');
+    url('./imagens/cemiterio.webp');
   background-size: cover;
   background-position: center;
 }
@@ -539,7 +539,7 @@ input:focus, textarea:focus {
 .tela-amuletos {
   background-image:
     linear-gradient(180deg, #0f0f1af0 0%, #0a0a0ff0 100%),
-    url('./imagens/city_of_tears.webp');
+    url('./imagens/cidadechoro.webp');
   background-size: cover;
   background-position: center bottom;
 }
