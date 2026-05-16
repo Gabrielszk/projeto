@@ -1,3 +1,8 @@
+/* =============================================
+   style.css — Hallownest Combat Academy
+   Tema: Hollow Knight — Dark Gothic Underground
+   ============================================= */
+
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
 
@@ -349,6 +354,10 @@ input:focus, textarea:focus {
   font-family: var(--font-body);
 }
 
+/* =============================================
+   Imagens — adicionadas ao style.css
+   ============================================= */
+
 /* Hero knight */
 .hero-knight {
   margin-top: 2.5rem;
@@ -450,7 +459,7 @@ input:focus, textarea:focus {
 
 .charm-card:hover::before { opacity: 1; }
 
-/*coloring for charm cards */
+/* nth-child coloring for charm cards */
 .charm-card:nth-child(3n+1) { border-color: #2a2a45; }
 .charm-card:nth-child(3n+2):hover { border-color: var(--accent-nail); box-shadow: var(--shadow-nail); }
 .charm-card:nth-child(3n):hover   { border-color: #8844cc88; box-shadow: 0 8px 30px #8844cc22; }
@@ -500,32 +509,39 @@ input:focus, textarea:focus {
   line-height: 1.5;
 }
 
-/* Background images*/
-.parte-2 {
+/* Background images for sections */
+.parte1 {
   background-image:
-    linear-gradient(180deg, #0f0f1aee 0%, #0a0a0fee 100%),
+    radial-gradient(ellipse at 20% 50%, #1a0a3a66 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, #0a1a3a66 0%, transparent 60%),
+    linear-gradient(180deg, #0a0a0fcc 0%, #0f0f1acc 100%),
     url('./imagens/elderbug.webp');
   background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background-position: center top;
 }
 
-.parte-4 {
+.tela-2 {
   background-image:
-    linear-gradient(180deg, #0f0f1af0 0%, #0a0a0ff0 100%),
+    linear-gradient(180deg, #0f0f1aee 0%, #0a0a0fee 100%),
     url('./imagens/city_of_tears.webp');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
 }
 
-.tela-amuletos {
+.tela-4 {
   background-image:
     linear-gradient(180deg, #0f0f1af0 0%, #0a0a0ff0 100%),
     url('./imagens/resting_grounds.webp');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+}
+
+.tela-amuletos {
+  background-image:
+    linear-gradient(180deg, #0f0f1af0 0%, #0a0a0ff0 100%),
+    url('./imagens/city_of_tears.webp');
+  background-size: cover;
+  background-position: center bottom;
 }
 
 /* ---- Responsive ---- */
