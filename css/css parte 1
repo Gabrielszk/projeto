@@ -1,9 +1,4 @@
-
 .parte1 {
-  background: 
-    radial-gradient(ellipse at 20% 50%, #1a0a3a44 0%, transparent 60%),
-    radial-gradient(ellipse at 80% 20%, #0a1a3a44 0%, transparent 60%),
-    linear-gradient(180deg, #0a0a0f 0%, #0f0f1a 100%);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,7 +8,7 @@
   position: relative;
 }
 
-/*partículas */
+/* Animated background particles */
 .parte1::after {
   content: '';
   position: absolute;
@@ -28,7 +23,7 @@
   pointer-events: none;
   z-index: 0;
 }
-/*herói */
+
 .hero-content {
   position: relative;
   z-index: 2;
@@ -109,7 +104,7 @@
 
 .hero-cta i { font-size: 1rem; }
 
-
+/* Floating soul orb */
 .soul-orb {
   width: 200px;
   height: 200px;
@@ -139,7 +134,7 @@
   animation: pulse-soul 3s ease-in-out infinite;
 }
 
-
+/* Ring around orb */
 .soul-orb::before {
   content: '';
   position: absolute;
@@ -158,7 +153,7 @@
   animation: rotate-slow 25s linear infinite reverse;
 }
 
-
+/* Scroll  */
 .scroll-hint {
   position: absolute;
   bottom: 2rem;
