@@ -1,0 +1,542 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+
+/* ---- CSS Variables ---- */
+:root {
+  --bg-deep:       #0a0a0f;
+  --bg-dark:       #0f0f1a;
+  --bg-mid:        #141428;
+  --bg-card:       #1a1a30;
+  --bg-card-hover: #1f1f38;
+
+  --accent-soul:   #7ecfff;   /* soul blue */
+  --accent-void:   #3a1a6e;   /* void purple */
+  --accent-nail:   #c8a96e;   /* nail gold */
+  --accent-infection: #ff8c00; /* infection orange */
+  --accent-pale:   #e8e0d0;   /* pale king white */
+
+  --text-primary:  #d4cfc8;
+  --text-dim:      #8a8070;
+  --text-bright:   #f0ece4;
+
+  --border-color:  #2a2a45;
+  --border-glow:   #7ecfff44;
+
+  --font-title:    'Cinzel Decorative', serif;
+  --font-body:     'Crimson Text', serif;
+
+  --shadow-soul:   0 0 20px #7ecfff33, 0 0 60px #7ecfff11;
+  --shadow-nail:   0 0 15px #c8a96e44;
+}
+
+/* ---- Reset & Base ---- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-deep);
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='4' fill='%237ecfff' opacity='0.8'/%3E%3C/svg%3E"), auto;
+}
+
+/* ---- Scrollbar ---- */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-deep); }
+::-webkit-scrollbar-thumb { background: var(--accent-void); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent-soul); }
+
+/* ---- Selection Pseudo-element ---- */
+::selection {
+  background: var(--accent-void);
+  color: var(--accent-soul);
+}
+
+/* ---- Nav ---- */
+.sidebar-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(180deg, #0a0a0fee 0%, #0a0a0f00 100%);
+  backdrop-filter: blur(4px);
+}
+
+.nav-item {
+  font-family: var(--font-title);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  text-decoration: none;
+  padding: 0.5rem 1.2rem;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Pseudo-class :hover */
+.nav-item:hover {
+  color: var(--accent-soul);
+  border-color: var(--border-glow);
+  text-shadow: 0 0 12px var(--accent-soul);
+  background: #7ecfff0a;
+}
+
+/* Pseudo-class :active */
+.nav-item:active {
+  transform: scale(0.96);
+}
+
+.nav-item.active {
+  color: var(--accent-soul);
+  border-color: var(--accent-soul);
+  text-shadow: var(--shadow-soul);
+}
+
+/* ---- Section Base ---- */
+section {
+  min-height: 100vh;
+  padding: 7rem 4rem 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Noise texture overlay via pseudo-element */
+section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}
+
+section > * { position: relative; z-index: 1; }
+
+/* ---- Section Headers ---- */
+.section-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.section-header h1 {
+  font-family: var(--font-title);
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  color: var(--text-bright);
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 30px #7ecfff22;
+}
+
+/* Pseudo-element ::first-letter */
+.section-header p::first-letter {
+  font-size: 1.6em;
+  color: var(--accent-soul);
+  font-weight: 600;
+  float: left;
+  margin-right: 0.05em;
+  line-height: 1;
+}
+
+.section-header p {
+  color: var(--text-dim);
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1rem 0 2rem;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  height: 1px;
+  width: 80px;
+  background: linear-gradient(90deg, transparent, var(--accent-soul), transparent);
+}
+
+.divider i {
+  color: var(--accent-soul);
+  font-size: 1.2rem;
+  animation: pulse-soul 3s ease-in-out infinite;
+}
+
+/* ---- Cards ---- */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Pseudo-element ::before for card glow line */
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent-soul), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Pseudo-class :hover on cards */
+.card:hover {
+  border-color: var(--border-glow);
+  background: var(--bg-card-hover);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-soul);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card h2 {
+  font-family: var(--font-title);
+  font-size: 1.1rem;
+  color: var(--accent-nail);
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  font-family: var(--font-title);
+  font-size: 0.85rem;
+  color: var(--accent-soul);
+  letter-spacing: 0.1em;
+  margin-bottom: 0.75rem;
+}
+
+/* ---- Layout Utilities ---- */
+.conteudo-layout {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.col-50 { flex: 1 1 45%; }
+.col-33 { flex: 1 1 30%; }
+.col-100 { flex: 1 1 100%; }
+
+/* ---- Animations ---- */
+@keyframes pulse-soul {
+  0%, 100% { opacity: 0.6; text-shadow: 0 0 8px var(--accent-soul); }
+  50% { opacity: 1; text-shadow: 0 0 20px var(--accent-soul), 0 0 40px var(--accent-soul); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes flicker-in {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes rotate-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ---- Rune Decorations ---- */
+.rune-circle {
+  width: 120px;
+  height: 120px;
+  border: 1px solid var(--border-glow);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  position: relative;
+  animation: rotate-slow 20s linear infinite;
+}
+
+.rune-circle::after {
+  content: '';
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border: 1px dashed #7ecfff22;
+  border-radius: 50%;
+  animation: rotate-slow 10s linear infinite reverse;
+}
+
+.rune-circle i {
+  font-size: 2rem;
+  color: var(--accent-soul);
+  animation: rotate-slow 20s linear infinite reverse;
+}
+
+/* ---- Tag Badges ---- */
+.badge {
+  display: inline-block;
+  font-family: var(--font-title);
+  font-size: 0.55rem;
+  letter-spacing: 0.12em;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid var(--accent-void);
+  border-radius: 2px;
+  color: var(--accent-soul);
+  background: #7ecfff08;
+  margin: 0.25rem;
+  text-transform: uppercase;
+}
+
+/* ---- Footer ---- */
+.footer-principal {
+  background: var(--bg-dark);
+  border-top: 1px solid var(--border-color);
+  padding: 2rem 4rem;
+  text-align: center;
+  font-family: var(--font-title);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  color: var(--text-dim);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.footer-principal::before {
+  content: '⚔';
+  font-size: 1.2rem;
+  color: var(--accent-nail);
+  margin-bottom: 0.5rem;
+}
+
+/* ---- Input focus pseudo-class ---- */
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--accent-soul) !important;
+  box-shadow: 0 0 0 2px #7ecfff22;
+}
+
+/* ---- Placeholder pseudo-element ---- */
+::placeholder {
+  color: var(--text-dim);
+  font-style: italic;
+  font-family: var(--font-body);
+}
+
+/* Hero knight */
+.hero-knight {
+  margin-top: 2.5rem;
+  position: relative;
+  z-index: 2;
+  animation: float 4s ease-in-out infinite, flicker-in 1s ease 0.3s both;
+}
+
+.hero-knight img {
+  width: 160px;
+  filter: drop-shadow(0 0 20px #7ecfff55) drop-shadow(0 0 40px #7ecfff22);
+  image-rendering: pixelated;
+}
+
+/* Sobre: knight image */
+.img-knight-sobre {
+  width: 70%;
+  max-width: 200px;
+  filter: drop-shadow(0 0 25px #7ecfff44);
+  image-rendering: pixelated;
+  animation: float 5s ease-in-out infinite;
+}
+
+/* Boss images */
+.boss-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 8px #7ecfff33);
+}
+
+.boss-avatar {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-deep);
+  overflow: hidden;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  padding: 4px;
+}
+
+/* Espada featured */
+.feat-img-espada {
+  width: 80px;
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 15px #7ecfff77);
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Charms section */
+.tela-amuletos {
+  background:
+    radial-gradient(ellipse at 50% 0%, #3a1a6e22 0%, transparent 60%),
+    linear-gradient(180deg, #0f0f1a 0%, #0a0a0f 100%);
+  min-height: 100vh;
+  padding: 7rem 4rem 4rem;
+}
+
+.charms-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  justify-content: center;
+}
+
+.charm-card {
+  flex: 1 1 160px;
+  max-width: 200px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  transition: all 0.35s ease;
+  position: relative;
+}
+
+.charm-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 4px;
+  background: radial-gradient(ellipse at center, #7ecfff08, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.charm-card:hover {
+  border-color: var(--accent-soul);
+  transform: translateY(-6px);
+  box-shadow: 0 8px 30px #7ecfff22;
+}
+
+.charm-card:hover::before { opacity: 1; }
+
+/*coloring for charm cards */
+.charm-card:nth-child(3n+1) { border-color: #2a2a45; }
+.charm-card:nth-child(3n+2):hover { border-color: var(--accent-nail); box-shadow: var(--shadow-nail); }
+.charm-card:nth-child(3n):hover   { border-color: #8844cc88; box-shadow: 0 8px 30px #8844cc22; }
+
+.charm-img-wrap {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-deep);
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+.charm-card:hover .charm-img-wrap {
+  border-color: var(--accent-soul);
+  box-shadow: 0 0 15px #7ecfff33;
+}
+
+.charm-img-wrap img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 6px #7ecfff44);
+  transition: transform 0.3s;
+}
+
+.charm-card:hover .charm-img-wrap img {
+  transform: scale(1.15) rotate(5deg);
+}
+
+.charm-card h3 {
+  font-family: var(--font-title);
+  font-size: 0.7rem;
+  color: var(--text-bright);
+  letter-spacing: 0.08em;
+  margin-bottom: 0.4rem;
+}
+
+.charm-card p {
+  font-size: 0.82rem;
+  color: var(--text-dim);
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+/* Background images*/
+.parte-2 {
+  background-image:
+    linear-gradient(180deg, #0f0f1aee 0%, #0a0a0fee 100%),
+    url('./imagens/elderbug.webp');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.parte-4 {
+  background-image:
+    linear-gradient(180deg, #0f0f1af0 0%, #0a0a0ff0 100%),
+    url('./imagens/city_of_tears.webp');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.tela-amuletos {
+  background-image:
+    linear-gradient(180deg, #0f0f1af0 0%, #0a0a0ff0 100%),
+    url('./imagens/resting_grounds.webp');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  section { padding: 6rem 1.5rem 3rem; }
+  .sidebar-nav { gap: 0.2rem; padding: 0.8rem 1rem; }
+  .nav-item { font-size: 0.55rem; padding: 0.4rem 0.7rem; }
+  .conteudo-layout { flex-direction: column; }
+  .col-50, .col-33 { flex: 1 1 100%; }
+  .tela-amuletos { padding: 6rem 1.5rem 3rem; }
+  .charm-card { flex: 1 1 130px; }
+  .feat-img-espada { width: 60px; }
+  .hero-knight img { width: 120px; }
+}

@@ -1,0 +1,178 @@
+.parte-3 {
+  background: 
+    radial-gradient(ellipse at 50% 0%, #0a1a3a44 0%, transparent 60%),
+    linear-gradient(180deg, #0a0a0f 0%, #0f0f1a 100%);
+}
+
+/* Attack cards grid */
+.ataques-grid {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.ataque-card {
+  flex: 1 1 260px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 1.75rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s ease;
+}
+
+.ataque-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--card-accent, var(--accent-soul)), transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.ataque-card:hover {
+  border-color: var(--card-accent, var(--border-glow));
+  background: var(--bg-card-hover);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px var(--card-shadow, #7ecfff22);
+}
+
+.ataque-card:hover::after { opacity: 1; }
+
+/* Colors */
+.ataque-card.nail {
+  --card-accent: #c8a96e88;
+  --card-shadow: #c8a96e22;
+}
+.ataque-card.soul {
+  --card-accent: #7ecfff88;
+  --card-shadow: #7ecfff22;
+}
+.ataque-card.void {
+  --card-accent: #8844cc88;
+  --card-shadow: #8844cc22;
+}
+.ataque-card.charm {
+  --card-accent: #ff8c0088;
+  --card-shadow: #ff8c0022;
+}
+
+.ataque-icon-wrap {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  background: var(--card-shadow, #7ecfff11);
+  border: 1px solid var(--card-accent, var(--border-color));
+}
+
+.ataque-icon-wrap i {
+  font-size: 1.6rem;
+  color: var(--card-accent, var(--accent-soul));
+}
+
+.ataque-card h3 {
+  font-family: var(--font-title);
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  color: var(--text-bright);
+  margin-bottom: 0.25rem;
+}
+
+.ataque-type-tag {
+  font-family: var(--font-title);
+  font-size: 0.5rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--card-accent, var(--accent-soul));
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.ataque-card p {
+  font-size: 0.95rem;
+  color: var(--text-dim);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Damage bar */
+.damage-bar-wrap {
+  margin-top: auto;
+}
+
+.damage-label {
+  font-family: var(--font-title);
+  font-size: 0.5rem;
+  letter-spacing: 0.15em;
+  color: var(--text-dim);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.3rem;
+}
+
+.damage-bar {
+  height: 4px;
+  background: var(--bg-deep);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.damage-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--card-accent, var(--accent-soul)), var(--card-accent, var(--accent-soul)));
+  border-radius: 2px;
+  box-shadow: 0 0 8px var(--card-accent, var(--accent-soul));
+  transition: width 0.6s ease;
+}
+
+/* attack - wide */
+.ataque-featured {
+  flex: 1 1 100%;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  background: linear-gradient(135deg, var(--bg-card), #3a1a6e11);
+  border-color: #7ecfff33;
+}
+
+.ataque-featured .feat-icon {
+  font-size: 5rem;
+  color: var(--accent-soul);
+  opacity: 0.8;
+  animation: pulse-soul 4s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+.ataque-featured-info h2 {
+  font-family: var(--font-title);
+  font-size: 1.5rem;
+  color: var(--accent-soul);
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 20px var(--accent-soul);
+}
+
+.ataque-featured-info p {
+  color: var(--text-primary);
+  font-size: 1rem;
+  max-width: 600px;
+}
+
+.badges-row {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+@media (max-width: 600px) {
+  .ataque-featured { flex-direction: column; text-align: center; }
+}

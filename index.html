@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hallownest</title>
+
+  <!-- CSS Externo -->
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/parte1.css">
+  <link rel="stylesheet" href="./css/parte2.css">
+  <link rel="stylesheet" href="./css/parte3.css">
+  <link rel="stylesheet" href="./css/parte4.css">
+  <link rel="stylesheet" href="./css/parte5.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+  <!-- Boxicons -->
+  <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
+  <link href="https://cdn.boxicons.com/3.0.8/fonts/filled/boxicons-filled.min.css" rel="stylesheet">
+  <link href="https://cdn.boxicons.com/3.0.8/fonts/brands/boxicons-brands.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAVEGAÇÃO-->
+  <nav class="sidebar-nav">
+    <a href="#home"      class="nav-item active">Início</a>
+    <a href="#sobre"     class="nav-item">Sobre</a>
+    <a href="#ataques"   class="nav-item">Ataques</a>
+    <a href="#batalhas"  class="nav-item">Batalhas</a>
+    <a href="#amuletos"  class="nav-item">Amuletos</a>
+    <a href="#contato"   class="nav-item">Contato</a>
+  </nav>
+
+  <!--  HOME / HERO -->
+  <section id="home" class="parte1">
+    <div class="hero-content">
+      <span class="hero-badge">
+        <i class="bx bx-star"></i>&nbsp; Estabelecida no Reino de Hallownest
+      </span>
+
+      <h1 class="hero-title">
+        Hallownest<br>
+        <span>Combat</span><br>
+        Academy
+      </h1>
+
+      <p class="hero-subtitle">A Arte do Prego — Dominada</p>
+
+      <p class="hero-desc">
+        Aprenda as técnicas ancestrais de combate praticadas pelos guerreiros
+        do Reino Esquecido. Domine o Prego, canalize a Alma e enfrente
+        os inimigos das profundezas.
+      </p>
+
+      <a href="#ataques" class="hero-cta">
+        <i class="bx bx-right-arrow-alt"></i>
+        Ver Técnicas
+      </a>
+    </div>
+
+    <!-- Knight image -->
+    <div class="hero-knight">
+      <img src="./imagens/The_Knight_Idle.png" alt="O Cavaleiro de Hallownest">
+    </div>
+
+    <!-- Scroll hint -->
+    <div class="scroll-hint">
+      <span>Descer</span>
+      <i class="bx bx-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="tela-2">
+    <div class="section-header">
+      <h1>Sobre a Academia</h1>
+      <div class="divider"><i class="bx bxs-diamond"></i></div>
+      <p>Fundada nas profundezas de Hallownest, nossa academia preserva os ensinamentos
+         dos grandes guerreiros insetos que defenderam o reino.</p>
+    </div>
+
+    <div class="sobre-grid conteudo-layout">
+      <div class="sobre-text col-50">
+        <div class="card">
+          <h2><i class="bx bx-book-open" style="margin-right:0.5rem;color:var(--accent-soul)"></i>Nossa História</h2>
+          <p>
+            A Hallownest Combat Academy nasceu da necessidade de preservar o conhecimento
+            de combate que ameaçava ser perdido com a queda do reino. Seus fundadores,
+            mestres veteranos da Guilda dos Guerreiros, documentaram cada técnica,
+            cada golpe e cada manobra aprendida em décadas de batalha.
+          </p>
+          <p>
+            Hoje, formamos a próxima geração de guerreiros — não para conquistar,
+            mas para sobreviver. O reino é sombrio, e apenas aqueles que dominam
+            corpo, mente e alma podem atravessá-lo.
+          </p>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats-row">
+          <div class="stat-item">
+            <span class="stat-number">47</span>
+            <span class="stat-label">Técnicas</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">12</span>
+            <span class="stat-label">Mestres</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">∞</span>
+            <span class="stat-label">Alma</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">1</span>
+            <span class="stat-label">Reino</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sobre-visual col-50">
+        <div class="knight-display">
+          <img src="./imagens/The_Knight_Idle.png" alt="O Cavaleiro" class="img-knight-sobre">
+          <p>O Cavaleiro — Símbolo da Academia</p>
+          <p style="font-size:0.7rem;opacity:0.5">Vazio encarnado, propósito eterno</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pilares -->
+    <div class="pilares-row">
+      <div class="pilar-card">
+        <i class="bx bx-sword"></i>
+        <h3>Maestria do Prego</h3>
+        <p>Técnicas de ataque preciso com o Prego Antigo, desde golpes básicos até manobras avançadas.</p>
+      </div>
+      <div class="pilar-card">
+        <i class="bx bx-droplet"></i>
+        <h3>Canalização da Alma</h3>
+        <p>Aprenda a coletar e usar a energia Alma para magias poderosas e cura em combate.</p>
+      </div>
+      <div class="pilar-card">
+        <i class="bx bx-run"></i>
+        <h3>Mobilidade e Esquiva</h3>
+        <p>Domine saltos, dash e posicionamento para evitar ataques dos inimigos mais perigosos.</p>
+      </div>
+      <div class="pilar-card">
+        <i class="bx bx-brain"></i>
+        <h3>Leitura de Padrões</h3>
+        <p>Identifique os padrões de ataque de cada inimigo e transforme defesa em oportunidade.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ATAQUES -->
+  <section id="ataques" class="tela-3">
+    <div class="section-header">
+      <h1>Arsenal de Técnicas</h1>
+      <div class="divider"><i class="bx bxs-zap"></i></div>
+      <p>Cada ataque é uma arte. Cada golpe, uma sentença. Conheça as técnicas
+         ensinadas em nossa academia.</p>
+    </div>
+
+    <div class="ataques-grid">
+
+      <!-- Featured: Ataque do Prego -->
+      <div class="ataque-card ataque-featured soul">
+        <img src="./imagens/espada.png" alt="Prego Antigo" class="feat-img-espada">
+        <div class="ataque-featured-info">
+          <h2>Vendaval da Alma</h2>
+          <p>
+            A técnica mais poderosa do arsenal mágico — um feixe de energia Alma
+            concentrada lançado à distância. Requer domínio completo da meditação
+            e canalização de Alma acumulada em batalha. Técnica exclusiva dos
+            alunos avançados da academia.
+          </p>
+          <div class="badges-row">
+            <span class="badge">Magia Avançada</span>
+            <span class="badge">Longo Alcance</span>
+            <span class="badge">Alta Alma</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Golpe do Prego -->
+      <div class="ataque-card nail">
+        <div class="ataque-icon-wrap">
+          <i class="bx bx-minus"></i>
+        </div>
+        <h3>Golpe do Prego</h3>
+        <span class="ataque-type-tag">Físico · Curto Alcance</span>
+        <p>
+          O ataque fundamental. Um golpe horizontal direto com o Prego Antigo.
+          Base de toda a cadeia de combate e ponto de partida para combos avançados.
+        </p>
+        <div class="damage-bar-wrap">
+          <div class="damage-label">
+            <span>Dano Base</span>
+            <span>13</span>
+          </div>
+          <div class="damage-bar">
+            <div class="damage-fill" style="width: 45%"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bote para Cima -->
+      <div class="ataque-card nail">
+        <div class="ataque-icon-wrap">
+          <i class="bx bx-up-arrow-alt"></i>
+        </div>
+        <h3>Bote para Cima</h3>
+        <span class="ataque-type-tag">Físico · Ascensão</span>
+        <p>
+          Um golpe vertical ascendente que arremessa o Prego para cima.
+          Essencial para atingir inimigos aéreos e iniciar manobras no ar.
+        </p>
+        <div class="damage-bar-wrap">
+          <div class="damage-label">
+            <span>Dano Base</span>
+            <span>13</span>
+          </div>
+          <div class="damage-bar">
+            <div class="damage-fill" style="width: 45%"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mergulho -->
+      <div class="ataque-card nail">
+        <div class="ataque-icon-wrap">
+          <i class="bx bx-down-arrow-alt"></i>
+        </div>
+        <h3>Mergulho do Prego</h3>
+        <span class="ataque-type-tag">Físico · Descida</span>
+        <p>
+          Ataque descendente que pode ser usado no ar para atingir inimigos abaixo
+          e criar distância vertical — ou usar inimigos como trampolim.
+        </p>
+        <div class="damage-bar-wrap">
+          <div class="damage-label">
+            <span>Dano Base</span>
+            <span>13</span>
+          </div>
+          <div class="damage-bar">
+            <div class="damage-fill" style="width: 45%"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feitiço Descida -->
+      <div class="ataque-card soul">
+        <div class="ataque-icon-wrap">
+          <i class="bx bx-droplet"></i>
+        </div>
+        <h3>Descida Sombria</h3>
+        <span class="ataque-type-tag">Magia · Impacto</span>
+        <p>
+          Mergulho mágico que cria uma onda de Alma no impacto.
+          Altamente eficaz contra grupos de inimigos no chão.
+          Consome 33 de Alma.
+        </p>
+        <div class="damage-bar-wrap">
+          <div class="damage-label">
+            <span>Dano Total</span>
+            <span>30+15</span>
+          </div>
+          <div class="damage-bar">
+            <div class="damage-fill" style="width: 72%"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feitiço Clamor -->
+      <div class="ataque-card void">
+        <div class="ataque-icon-wrap">
+          <img src="./imagens/Soul_Vessel.png" alt="Vaso da Alma" style="width:36px;height:36px;object-fit:contain;">
+        </div>
+        <h3>Clamor Furioso</h3>
+        <span class="ataque-type-tag">Magia · Explosivo</span>
+        <p>
+          Magia que detona no ponto de impacto, causando dano em área.
+          Tiro horizontal de alta energia que atravessa grupos de inimigos.
+          Consome 33 de Alma.
+        </p>
+        <div class="damage-bar-wrap">
+          <div class="damage-label">
+            <span>Dano Total</span>
+            <span>15×2</span>
+          </div>
+          <div class="damage-bar">
+            <div class="damage-fill" style="width: 60%"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Técnica Void -->
+      <div class="ataque-card charm">
+        <div class="ataque-icon-wrap">
+          <i class="bx bx-infinite"></i>
+        </div>
+        <h3>Abraço do Vazio</h3>
+        <span class="ataque-type-tag">Vazio · Supremo</span>
+        <p>
+          A técnica mais obscura — acessível apenas ao mergulhar no Vazio absoluto.
+          Transforma o praticante em uma entidade de puro Vazio por instantes.
+          Ensinado apenas ao aluno mais avançado.
+        </p>
+        <div class="damage-bar-wrap">
+          <div class="damage-label">
+            <span>Dano</span>
+            <span>???</span>
+          </div>
+          <div class="damage-bar">
+            <div class="damage-fill" style="width: 100%"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Bosses  -->
+  <section id="batalhas" class="tela-4">
+    <div class="section-header">
+      <h1>Simulações de Batalha</h1>
+      <div class="divider"><i class="bx bxs-shield"></i></div>
+      <p>Conheça os adversários usados em nossos treinos. Cada encontro
+         é uma lição. Cada derrota, um aprendizado.</p>
+    </div>
+
+    <div class="boss-grid">
+
+      <!-- Boss 1: Falso Cavaleiro -->
+      <div class="boss-card">
+        <div class="boss-header">
+          <div class="boss-avatar">
+            <img src="./imagens/false_knight.png" alt="Falso Cavaleiro" class="boss-img">
+          </div>
+          <div>
+            <div class="boss-name">Falso Cavaleiro</div>
+            <div class="boss-location">
+              <i class="bx bx-map-pin"></i>Campos Esquecidos
+            </div>
+          </div>
+        </div>
+        <div class="boss-body">
+          <p>
+            Um Masma que se apossou da armadura de um Cavaleiro caído. Seus ataques
+            são lentos mas impiedosos, com um martelo gigantesco.
+          </p>
+          <div class="difficulty-row">
+            <span class="difficulty-label">Dificuldade</span>
+            <div class="difficulty-dots">
+              <div class="dot filled"></div>
+              <div class="dot filled"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+          <div class="difficulty-row">
+            <span class="difficulty-label">Alma Gerada</span>
+            <div class="difficulty-dots">
+              <div class="dot filled"></div>
+              <div class="dot filled"></div>
+              <div class="dot filled"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+          <div class="tips-box">
+            <h4><i class="bx bx-bulb"></i>&nbsp; Dicas de Combate</h4>
+            <ul>
+              <li>Fique abaixo dele e ataque verticalmente</li>
+              <li>Afaste ao ver o martelo levantado</li>
+              <li>Use a plataforma quando ele pular</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Boss 2: Mago das Damas -->
+      <div class="boss-card">
+        <div class="boss-header">
+          <div class="boss-avatar">
+            <img src="./imagens/soul_master.png" alt="Mago das Damas" class="boss-img">
+          </div>
+          <div>
+            <div class="boss-name">Mago das Damas</div>
+            <div class="boss-location">
+              <i class="bx bx-map-pin"></i>Jardins da Rainha
+            </div>
+          </div>
+        </div>
+        <div class="boss-body">
+          <p>
+            Uma entidade feminina etérea que controla a magia da Alma.
+            Projeta orbes de energia e teleporta em padrões imprevisíveis.
+          </p>
+          <div class="difficulty-row">
+            <span class="difficulty-label">Dificuldade</span>
+            <div class="difficulty-dots">
+              <div class="dot filled"></div>
+              <div class="dot filled"></div>
+              <div class="dot filled"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+          <div class="difficulty-row">
+            <span class="difficulty-label">Alma Gerada</span>
+            <div class="difficulty-dots">
+              <div class="dot filled"></div>
+              <div class="dot filled"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+          <div class="tips-box">
+            <h4><i class="bx bx-bulb"></i>&nbsp; Dicas de Combate</h4>
+            <ul>
+              <li>Decore os 4 padrões de teletransporte</li>
+              <li>Orbes seguem curva — afaste em diagonal</li>
+              <li>Aproveite as pausas para golpes rápidos</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Boss 3: Irmãos da Pata -->
+      <div class="boss-card">
+        <div class="boss-header">
+          <div class="boss-avatar">
+            <i class="bx bxs-ghost"></i>
+          </div>
+          <div>
+            <div class="boss-name">Irmãos da Pata</div>
+            <div class="boss-location">
+              <i class="bx bx-map-pin"></i>Ruínas da Cidade
+            </div>
+          </div>
+        </div>
+        <div class="boss-body">
+          <p>
+            Três guerreiros insetos que lutam em conjunto com total
+            sincronicidade. O maior desafio de gestão de arena da academia.
+          </p>
+          <div class="difficulty-row">
+            <span class="difficulty-label">Dificuldade</span>
+            <div class="difficulty-dots">
+              <div class="dot filled danger"></div>
+              <div class="dot filled danger"></div>
+              <div class="dot filled danger"></div>
+              <div class="dot filled danger"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+          <div class="difficulty-row">
+            <span class="difficulty-label">Alma Gerada</span>
+            <div class="difficulty-dots">
+              <div class="dot filled"></div>
+              <div class="dot filled"></div>
+              <div class="dot filled"></div>
+              <div class="dot filled"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+          <div class="tips-box">
+            <h4><i class="bx bx-bulb"></i>&nbsp; Dicas de Combate</h4>
+            <ul>
+              <li>Elimine o menor primeiro — menos pressão</li>
+              <li>Nunca fique em canto; mantenha mobilidade</li>
+              <li>Use Descida Sombria para dano em área</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Fases da Batalha -->
+    <div class="fases-section">
+      <h2><i class="bx bx-git-branch" style="margin-right:0.5rem"></i>Sistema de Fases de Batalha</h2>
+      <div class="fases-timeline">
+        <div class="fase-item">
+          <span class="fase-number">Fase 01</span>
+          <i class="bx bx-search-alt"></i>
+          <h4>Reconhecimento</h4>
+          <p>Observe padrões sem arriscar</p>
+        </div>
+        <div class="fase-item">
+          <span class="fase-number">Fase 02</span>
+          <i class="bx bx-crosshair"></i>
+          <h4>Abertura</h4>
+          <p>Identifique janelas de ataque</p>
+        </div>
+        <div class="fase-item">
+          <span class="fase-number">Fase 03</span>
+          <i class="bx bxs-bolt"></i>
+          <h4>Ofensiva</h4>
+          <p>Execute combos com precisão</p>
+        </div>
+        <div class="fase-item">
+          <span class="fase-number">Fase 04</span>
+          <i class="bx bx-droplet"></i>
+          <h4>Recuperação</h4>
+          <p>Cure quando seguro, recarregue Alma</p>
+        </div>
+        <div class="fase-item">
+          <span class="fase-number">Fase 05</span>
+          <i class="bx bxs-star"></i>
+          <h4>Finalização</h4>
+          <p>Pressione o adversário enfraquecido</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO AMULETOS (CHARMS) -->
+  <section id="amuletos" class="tela-amuletos">
+    <div class="section-header">
+      <h1>Amuletos da Academia</h1>
+      <div class="divider"><i class="bx bxs-diamond"></i></div>
+      <p>Os Amuletos concedem poderes especiais ao portador. Cada guerreiro
+         escolhe os que melhor combinam com seu estilo de combate.</p>
+    </div>
+
+    <div class="charms-grid">
+
+      <div class="charm-card">
+        <div class="charm-img-wrap">
+          <img src="./imagens/charm 1.png" alt="Amuleto 1">
+        </div>
+        <h3>Sprintmaster</h3>
+        <p>Aumenta a velocidade de movimento pelo reino.</p>
+        <span class="badge">Mobilidade</span>
+      </div>
+
+      <div class="charm-card">
+        <div class="charm-img-wrap">
+          <img src="./imagens/charm 2.png" alt="Amuleto 2">
+        </div>
+        <h3>Quick Slash</h3>
+        <p>Nascido de unhas imperfeitas e descartadas que se fundiram. Os pregos ainda anseiam para serem empunhados.
+Permite que o portador corte muito mais rápido com a unha.</p>
+        <span class="badge">Ataque</span>
+      </div>
+
+      <div class="charm-card">
+        <div class="charm-img-wrap">
+          <img src="./imagens/charm 3.png" alt="Amuleto 3">
+        </div>
+        <h3>Wayward Compass</h3>
+        <p>Sussurra sua localização para o portador sempre que um mapa está aberto, permitindo que os viajantes identifiquem sua localização atual.</p>
+        <span class="badge">Exploração</span>
+      </div>
+
+      <div class="charm-card">
+        <div class="charm-img-wrap">
+          <img src="./imagens/charm 4.png" alt="Amuleto 4">
+        </div>
+        <h3>Soul Catcher</h3>
+        <p>Usado por xamãs para extrair mais ALMA do mundo ao redor.
+Aumenta a quantidade de ALMA ganha ao acertar um inimigo com o prego.</p>
+        <span class="badge">Magia</span>
+      </div>
+
+      <div class="charm-card">
+        <div class="charm-img-wrap">
+          <img src="./imagens/charm 5.png" alt="Amuleto 5">
+        </div>
+        <h3>Dashmaster</h3>
+        <p>Tem a aparência de um inseto excêntrico conhecido apenas como 'O Mestre do Dash'.
+O portador poderá fazer dash com mais frequência, assim como dash para baixo. Perfeito para quem quer se movimentar o mais rápido possível.</p>
+        <span class="badge">Mobilidade</span>
+      </div>
+
+      <div class="charm-card">
+        <div class="charm-img-wrap">
+          <img src="./imagens/charm 6.png" alt="Amuleto 6">
+        </div>
+        <h3>Fury of the Fallen</h3>
+        <p>Incorpora a fúria e o heroísmo que caem sobre aqueles que estão prestes a morrer.
+Quando está próximo da morte, a força do portador aumenta.</p>
+        <span class="badge">Ataque</span>
+      </div>
+
+      <div class="charm-card">
+        <div class="charm-img-wrap">
+          <img src="./imagens/charm 7.png" alt="Amuleto 7">
+        </div>
+        <h3>Void Heart</h3>
+        <p>Um vazio que estava escondido dentro de si, agora sem restrições. Unifica o vazio sob a vontade do portador.
+Esse amuleto faz parte de seu portador e não pode ser desequipado.</p>
+        <span class="badge">Ataque</span>
+      </div>
+
+      <div class="charm-card">
+        <div class="charm-img-wrap">
+          <img src="./imagens/charm 8.png" alt="Amuleto 8">
+        </div>
+        <h3>Kingsoul</h3>
+        <p>Amuleto sagrado simbolizando uma união entre seres superiores. O portador absorverá lentamente a ALMA ilimitada contida nele.
+Abre caminho para um local de nascimento.</p>
+        <span class="badge">Exploração</span>
+      </div>
+
+      <div class="charm-card">
+        <div class="charm-img-wrap">
+          <img src="./imagens/charm 9.png" alt="Amuleto 9">
+        </div>
+        <h3>Grimmchild</h3>
+        <p>Usado por aqueles que participam do Ritual da Trupe Grimm.
+O portador deve procurar o Grimmkin e coletar suas chamas. Chamas não coletadas aparecerão no mapa do portador.</p>
+        <span class="badge">Suporte</span>
+      </div>
+
+      <div class="charm-card">
+        <div class="charm-img-wrap">
+          <img src="./imagens/charm 10.png" alt="Amuleto 10">
+        </div>
+        <h3>Longnail</h3>
+        <p>Aumenta o alcance da unha do portador, permitindo que ele ataque inimigos de mais longe.</p>
+        <span class="badge">Ataque</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!--Contato -->
+  <section id="contato" class="parte-5">
+    <div class="section-header">
+      <h1>Entre em Contato</h1>
+      <div class="divider"><i class="bx bx-envelope"></i></div>
+      <p>Pronto para iniciar sua jornada? Envie uma mensagem e nossos mestres
+         entrarão em contato em breve.</p>
+    </div>
+
+    <div class="contato-layout">
+      <!-- Info -->
+      <div class="contato-info">
+        <div class="info-block">
+          <div class="info-block-icon">
+            <i class="bx bx-map-pin"></i>
+          </div>
+          <div class="info-block-text">
+            <h4>Localização</h4>
+            <p>Cidade dos Choros, Hallownest<br>Setor da Guilda — Ala Sul</p>
+          </div>
+        </div>
+
+        <div class="info-block">
+          <div class="info-block-icon">
+            <i class="bx bx-at"></i>
+          </div>
+          <div class="info-block-text">
+            <h4>Correio da Alma</h4>
+            <p>academia@hallownest.net</p>
+          </div>
+        </div>
+
+        <div class="info-block">
+          <div class="info-block-icon">
+            <i class="bx bx-time"></i>
+          </div>
+          <div class="info-block-text">
+            <h4>Horário de Treino</h4>
+            <p>Todos os ciclos da lua<br>Do amanhecer ao colapso da luz</p>
+          </div>
+        </div>
+
+        <div class="lore-quote">
+          <p>
+            "Aqueles tolos o suficiente para atravessar esse vazio devem pagar o preço e renunciar à mente preciosa que esse reino concede." 
+          </p>
+          <cite>— Knight, ex-aluno da Academia</cite>
+        </div>
+
+        <!-- Links -->
+        <div class="social-row">
+          <a href="#" class="social-link"><i class="bx bxl-twitter"></i></a>
+          <a href="#" class="social-link"><i class="bx bxl-discord-alt"></i></a>
+          <a href="#" class="social-link"><i class="bx bxl-github"></i></a>
+          <a href="#" class="social-link"><i class="bx bxl-youtube"></i></a>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="contato-form">
+        <div class="card">
+          <h2><i class="bx bx-send" style="margin-right:0.5rem;color:var(--accent-soul)"></i>Enviar Mensagem</h2>
+
+          <div class="form-row" style="margin-top:1.5rem">
+            <div class="form-group">
+              <label class="form-label">Nome do Guerreiro</label>
+              <input type="text" class="form-input" placeholder="Seu nome aqui...">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Correio da Alma</label>
+              <input type="email" class="form-input" placeholder="seu@email.com">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Técnica de Interesse</label>
+            <input type="text" class="form-input" placeholder="Ex: Golpe do Prego, Magia da Alma...">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Sua Mensagem</label>
+            <textarea class="form-input form-textarea" placeholder="Descreva sua jornada e o que deseja aprender..."></textarea>
+          </div>
+
+          <button class="btn-submit">
+            <i class="bx bx-send"></i>
+            Enviar Pergaminho
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer class="footer-principal">
+    <p>Hallownest — CP2 Front-End</p>
+    <p>Gabriel Suarez Kulisauskas — RM569893</p>
+    <p>15 de maio de 2026</p>
+  </footer>
+
+  <!-- scroll -->
+  <script>
+    const sections = document.querySelectorAll('section[id]');
+    const navItems = document.querySelectorAll('.nav-item');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navItems.forEach(n => n.classList.remove('active'));
+          const active = document.querySelector(`.nav-item[href="#${entry.target.id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { threshold: 0.4 });
+
+    sections.forEach(s => observer.observe(s));
+  </script>
+
+</body>
+</html>
